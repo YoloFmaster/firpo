@@ -44,11 +44,14 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function attributeLabels()
     {
         return [
-            'id_user' => 'Id User',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'login' => 'Login',
-            'password' => 'Password',
+            'id_user' => 'ФИО (кириллица, дефис и пробел)',
+            'email' => 'Емейл',
+            'phone' => 'Телефон(89999999999)',
+            'login' => 'Логин (латиница)',
+            'password' => 'Пароль',
+            'password_repetition' => 'Повтор пароля',
+            'consent' => 'Согласие на обработку данных',
+            'admin' => 'Admin',
         ];
     }
 
