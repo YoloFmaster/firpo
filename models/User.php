@@ -44,9 +44,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function attributeLabels()
     {
         return [
-            'id_user' => 'ФИО (кириллица, дефис и пробел)',
-            'email' => 'Емейл',
-            'phone' => 'Телефон(89999999999)',
+            'id_user' => 'Индентефикатор пользователя',
+            'email' => 'Электронная почта',
+            'phone' => 'Телефон(+7)',
             'login' => 'Логин (латиница)',
             'password' => 'Пароль',
             'password_repetition' => 'Повтор пароля',
@@ -66,10 +66,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     //IDENTITYINTERFACE PKGH{
-        public static function tableName()
-        {
-            return 'user';
-        }
     
         /**
          * Finds an identity by the given ID.
